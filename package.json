@@ -1,0 +1,14 @@
+{
+  "name": "js-algorithms",
+  "version": "1.0.0",
+  "description": "challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "removed for challenge",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
