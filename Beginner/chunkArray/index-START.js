@@ -20,6 +20,7 @@ function chunkArray(array, size) {
     return newArray
 }
 
+// solution
 function chunkArray(array, size) {
     let result = []
 

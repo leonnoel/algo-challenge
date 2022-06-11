@@ -11,11 +11,9 @@ P: turn the string into array, split -
 
 
 
-
-function longestWord(text) {
-   let arr = text.split(' ')
-   const lengthMap = arr.map(x => arr.length)
-   return Math.max
+function reverseString(text) {
+   // Code goes here
+   return text.split("").reverse().join("")
 }
 
 

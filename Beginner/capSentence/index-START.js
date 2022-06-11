@@ -11,7 +11,7 @@ return the equivalent of the sentence when capitalised. E.g
  charAt method
 */
 
-
+// first attempt
 function capSentence(text) {
   
 let arr = text.toLowerCase().split(' ')
@@ -22,6 +22,19 @@ arr.forEach( el => {
 })
 console.log(arr)
 return arr.join(' ')
+}
+
+//solution
+
+function capSentence(text) {
+  let wordsArray = text.toLowerCase().split(' ')
+  let capsArray = []
+
+  wordsArray.forEach(word => {
+      capsArray.push(word[0].toUpperCase() + word.slice(1))
+  });
+
+  return capsArray.join(' ')
 }
 
 capSentence('the tales of scotch!')

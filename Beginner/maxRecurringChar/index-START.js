@@ -14,12 +14,43 @@ Once we find the characters that appear the most, we need to grab that charcater
 */
 
 
-
+// attempt 
 function maxRecurringChar(text) {
     // Code goes here
+    let counter = 0
+    let result = ''
+    let arr = text.split('').sort()
+    console.log(arr)
+    for (let i = 1; i < arr.length; i++){
+        if(arr[i] === arr[i + 1]){
+            counter++
+            console.log(arr[i])
+            result = arr[i].toString()
+            console.log(result)
+        }
+       return result
+    }
 
 }
-
-
+// solution
+function maxRecurringChar(text) {
+    let charMap = {}
+    let maxCharValue = 0
+    let maxChar = ''
+    for (let char of text) {
+        if (charMap.hasOwnProperty(char)) {
+            charMap[char]++
+        } else {
+            charMap[char] = 1
+        }
+    }
+    for (let char in charMap) {
+        if (charMap[char] > maxCharValue) {
+            maxCharValue = charMap[char]
+            maxChar = char
+        }
+    }
+    return maxChar
+}
 
 module.exports = maxRecurringChar;
