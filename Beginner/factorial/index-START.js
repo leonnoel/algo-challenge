@@ -6,14 +6,16 @@ the provided integer(n). E.g
 
 
 function factorial(n, memo) {
-    memo = memo || {}
-    if(memo[n]){
-        return memo[n]
-    }  
-    if (n === 0) {
-        return 1
-    }
-    return memo[n] = n * factorial(n - 1, memo)
+    function factorial(n) {
+        if (n <= 1){
+            return 1
+        }
+        for (let i = 1; i < n; i++){
+            n *= i
+        }
+     
+         return n
+     }
 }
 
 module.exports = factorial
